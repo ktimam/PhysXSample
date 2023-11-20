@@ -1,0 +1,36 @@
+[build-wasm]
+canister = "joltsample"
+did_path = "src/HelloWorld.did"
+cpp_paths = [
+    "src/HelloWorld.cpp",
+    "./physx/*.cpp",
+    "./physx/*/*.cpp",
+    "./physx/*/*/*.cpp",
+    "./physx/*/*/*/*.cpp",
+]
+cpp_include_dirs = ["include",
+    "physx",
+    "physx/*",
+    "physx/*/*",
+    "physx/*/*/*",
+    "physx/*/*/*/*",
+    "physx/*/*/*/*/*",
+]
+cpp_compile_flags = [
+    "-D __linux__",
+    "-D __i386__",
+    "-D PX_SIMD_DISABLED",
+    "-D PX_ARM",
+]
+cpp_link_flags = []
+c_paths = []
+c_header_paths = []
+c_compile_flags = []
+[build-native]
+cpp_paths = ["native/main.cpp"]
+cpp_include_dirs = []
+cpp_compile_flags = []
+cpp_link_flags = []
+c_paths = []
+c_include_dirs = []
+c_compile_flags = []

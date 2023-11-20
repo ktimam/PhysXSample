@@ -1,0 +1,16 @@
+{
+  "version": 1,
+  "canisters": {
+    "joltsample": {
+      "type": "custom",
+      "candid": "src/HelloWorld.did",
+      "wasm": "build/joltsample.wasm"
+    }
+  },
+  "defaults": {
+    "build": {
+      "args": "",
+      "packtool": ""
+    }
+  }
+}
